@@ -25,9 +25,11 @@ public class Bomba extends Actor
             MyWorld juego = (MyWorld) getWorld();
             juego.removeObject(this);
             //por cada objeto que desaparezca, aumente el pt.
-            juego.aumentar_puntuacion(10);
+            //juego.aumentar_puntuacion(10);
             juego.disminuir_num_rivales();
             juego.aumentar_num_adelantamientos();
         }
+        //Efecto de perdida de vidas, cuando tenga contacto con la bomba.
+        
     }
 }

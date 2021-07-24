@@ -1,8 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Counter here.
- * 
  * @author (your name) 
  * @version (a version number or a date)
  */
@@ -18,6 +16,7 @@ public class Counter extends Actor
     }
     public Counter(String prefix)
     {
+        //
         text = prefix;
         stringLength = (text.length() + 2) * 16;
 

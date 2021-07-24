@@ -20,30 +20,32 @@ public class Personaje extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        //Desplazamientos del personaje
         if (Greenfoot.isKeyDown("right")||Greenfoot.isKeyDown("d")){
-            if(getX()< 550){
+            if(getX()< 700){
                 setLocation(getX() + speed, getY());    
             }
             
         }
         if (Greenfoot.isKeyDown("left")||Greenfoot.isKeyDown("a")){
-            if(getX()> 50){
+            if(getX()> 200){
                 setLocation(getX() - speed, getY());    
             }
             
         }
+        CheckCollision();
     }
     
     public void CheckCollision(){
         Actor collided = getOneIntersectingObject(Bomba.class);
         if(collided != null){
+            //MyWorld papel = (MyWorld) getWorld();
             getWorld().removeObject(collided);
             getWorld().removeObject(this);
             Greenfoot.stop();
+            //Greenfoot.stop();
         }
     }
-    
     public void aumento_velocidad(){
         speed++;
     }

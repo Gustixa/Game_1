@@ -1,16 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Peligro here.
+ * Write a description of class Naranjas here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Peligro extends Actor
+public class Naranjas extends Actor
 {
     private int speed;
     
-    public Peligro(int v){
+    public Naranjas(int v){
         speed = v;
     }
     /**
@@ -25,11 +25,9 @@ public class Peligro extends Actor
             MyWorld juego = (MyWorld) getWorld();
             juego.removeObject(this);
             //por cada objeto que desaparezca, aumente el pt.
-            //juego.aumentar_puntuacion(10);
+            juego.aumentar_puntuacion(10);
             juego.disminuir_num_rivales();
             juego.aumentar_num_adelantamientos();
         }
-        //Efecto de perdida de vidas, cuando tenga contacto con la bomba.
-        
     }
 }

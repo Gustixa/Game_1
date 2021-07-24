@@ -20,7 +20,7 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    public vida objLife;
+    //public vida objLife;
     public MyWorld()
     {    
         //Vista inicial del juego
@@ -38,7 +38,7 @@ public class MyWorld extends World
         addObject(linux, 300, 650);
         addObject(level, 100, 60);
         addObject(score, 100, 30);
-        objLife = new vida();
+        //objLife = new vida();
     }
     
     public void act(){
@@ -82,61 +82,30 @@ public class MyWorld extends World
             int carril = getRandomNumber(0,5);
             
             if (carril == 0){
-                addObject(new Bomba(velocidad_objetos), 220, 80);
+                addObject(new Bomba(velocidad_objetos), 150, 80);
             }else if (carril == 1){
-                //addObject(new Fresas(velocidad_objetos), 280, 80);
-                addObject(new Hamburguesa(velocidad_objetos), 280, 80);
-                //addObject(new Naranjas(velocidad_objetos), 280, 80);
-                //addObject(new Papas(velocidad_objetos), 280, 80);
-                //addObject(new Peligro(velocidad_objetos), 280, 80);
-                //addObject(new Salud(velocidad_objetos), 280, 80);
+                addObject(new Hamburguesa(velocidad_objetos), 210, 80);
             }else if(carril == 2){
-                addObject(new Naranjas(velocidad_objetos), 280, 80);
+                addObject(new Naranjas(velocidad_objetos), 290, 80);
             }else if(carril == 3){    
-                addObject(new Fresas(velocidad_objetos), 280, 80);
+                addObject(new Fresas(velocidad_objetos), 350, 80);
             }else{
-                //addObject(new Bomba(velocidad_objetos), 410, 80);
-                //addObject(new Fresas(velocidad_objetos), 410, 80);
-                //addObject(new Hamburguesa(velocidad_objetos), 410, 80);
-                //addObject(new Naranja(velocidad_objetos), 410, 80);
-                //addObject(new Papas(velocidad_objetos), 410, 80);
                 addObject(new Peligro(velocidad_objetos), 410, 80);
-                //addObject(new Salud(velocidad_objetos), 410, 80);
             }
                    
             carril++;
             carril %= 5;
         
             if (carril == 0){
-                addObject(new Bomba(velocidad_objetos), 180, 80);
-                /*addObject(new Fresas(velocidad_objetos), 180, 80);
-                addObject(new Hamburguesa(velocidad_objetos), 180, 80);
-                addObject(new Naranja(velocidad_objetos), 180, 80);
-                addObject(new Papas(velocidad_objetos), 180, 80);
-                addObject(new Peligro(velocidad_objetos), 180, 80);
-                addObject(new Salud(velocidad_objetos), 180, 80);*/
+                addObject(new Fresas(velocidad_objetos), 150, 80);
             }else if (carril == 1){
-                //addObject(new Bomba(velocidad_objetos), 280, 80);
-                addObject(new Fresas(velocidad_objetos), 280, 80);
-                //addObject(new Hamburguesa(velocidad_objetos), 280, 80);
-                //addObject(new Naranja(velocidad_objetos), 280, 80);
-                //addObject(new Papas(velocidad_objetos), 280, 80);
-                //addObject(new Peligro(velocidad_objetos), 280, 80);
-                //addObject(new Salud(velocidad_objetos), 280, 80);
+                addObject(new Bomba(velocidad_objetos), 210, 80);
             }else if(carril == 2){
-                addObject(new Hamburguesa(velocidad_objetos), 280, 80);
-            }else if(carril == 2){
-                addObject(new Naranjas(velocidad_objetos), 280, 80);
+                addObject(new Hamburguesa(velocidad_objetos), 290, 80);
             }else if(carril == 3){
-                
+                addObject(new Peligro(velocidad_objetos), 350, 80);
             }else{
-                //addObject(new Bomba(velocidad_objetos), 510, 80);
-                //addObject(new Fresas(velocidad_objetos), 510, 80);
-                //addObject(new Hamburguesa(velocidad_objetos), 510, 80);
-                //addObject(new Naranja(velocidad_objetos), 510, 80);
-                //addObject(new Papas(velocidad_objetos), 510, 80);
-                addObject(new Peligro(velocidad_objetos), 510, 80);
-                //addObject(new Salud(velocidad_objetos), 510, 80);
+                addObject(new Naranjas(velocidad_objetos), 410, 80);
             num_rivales = 2;
             }
         }        

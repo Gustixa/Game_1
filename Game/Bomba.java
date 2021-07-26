@@ -1,16 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Bomba here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Objeto BOMBA, que tendra protagonismo en el juego
+ * para terminar el juego inmediatamente tenga contacto
+ * el personaje con este objeto.
+ *
+ * @author Josué Samuel Argueta Hernández   211024
+ * @version 25/07/2021
  */
 public class Bomba extends Actor
 {
     private int speed;
     
     public Bomba(int v){
+        //tener control de la velocidad de bajada.
         speed = v;
     }
     /**
@@ -19,17 +22,17 @@ public class Bomba extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        // Controlar el putno de bajada y contacto con el personaje.
         setLocation(getX(), getY() + speed);
         if(getY() >= getWorld().getHeight() - 1){
             MyWorld juego = (MyWorld) getWorld();
             juego.removeObject(this);
-            //por cada objeto que desaparezca, aumente el pt.
-            //juego.aumentar_puntuacion(10);
             juego.disminuir_num_rivales();
             juego.aumentar_num_adelantamientos();
+            
+            //Modificar
+            //GameOver t = new GameOver();
+            //getWorld().addObject(t,((getWorld().getWidth()/2)+30),((getWorld().getHeight()/2)+150));
         }
-        //Efecto de perdida de vidas, cuando tenga contacto con la bomba.
-        
     }
 }

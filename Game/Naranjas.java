@@ -1,25 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Naranjas here.
+ * Objeto Naranja, que proporcionará puntos.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Josué Samuel Argueta Hernández   211024
+ * @version 25/05/2021
  */
 public class Naranjas extends Actor
 {
     private int speed;
     
     public Naranjas(int v){
+        //Obtener control de la velocidad del objeto Naranja.
         speed = v;
     }
-    /**
-     * Act - do whatever the Bomba wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+
     public void act()
     {
-        // Add your action code here.
+        //Eliminar objeto cuando tenga control con el personaje.
         setLocation(getX(), getY() + speed);
         if(getY() >= getWorld().getHeight() - 1){
             MyWorld juego = (MyWorld) getWorld();

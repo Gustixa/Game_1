@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Counter
-comment0.text=\r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Llevar\ el\ control\ de\ los\ puntos\ y\ el\ nivel\ en\ donde\ se\r\n\ encuentra\ el\ jugador.\r\n\ \r\n\ @author\ Josu\u00E9\ Samuel\ Argueta\ Hern\u00E1ndez\ \ \ 211024\r\n\ @version\ 25/07/2021\r\n
 comment1.params=
 comment1.target=Counter()
 comment2.params=prefix

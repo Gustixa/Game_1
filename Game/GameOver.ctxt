@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=GameOver
+comment0.text=\r\n\ Mostrar\ Juego\ Terminado,\ seg\u00FAn\ haya\ sido\ la\ acci\u00F3n\r\n\ del\ jugador.\r\n\ \r\n\ @author\ Josu\u00E9\ Samuel\ Argueta\ Hern\u00E1ndez\ \ \ 211024\r\n\ @version\ 25/07/2021\r\n
+comment1.params=
+comment1.target=GameOver()
+comment2.params=prefix
+comment2.target=GameOver(java.lang.String)
+comment3.params=
+comment3.target=void\ act()
+numComments=4

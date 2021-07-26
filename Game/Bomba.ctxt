@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Bomba
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Bomba\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Objeto\ BOMBA,\ que\ tendra\ protagonismo\ en\ el\ juego\r\n\ para\ terminar\ el\ juego\ inmediatamente\ tenga\ contacto\r\n\ el\ personaje\ con\ este\ objeto.\r\n\r\n\ @author\ Josu\u00E9\ Samuel\ Argueta\ Hern\u00E1ndez\ \ \ 211024\r\n\ @version\ 25/07/2021\r\n
 comment1.params=v
 comment1.target=Bomba(int)
 comment2.params=

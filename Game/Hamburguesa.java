@@ -1,25 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Hamburguesa here.
+ * Objeto Hamburguesa, que quitará puntos.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Josué Samuel Argueta Hernández   211024
+ * @version 25/05/2021
  */
 public class Hamburguesa extends Actor
 {
     private int speed;
     
     public Hamburguesa(int v){
+        //tener control de la velocidad.
         speed = v;
     }
-    /**
-     * Act - do whatever the Bomba wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+
     public void act()
     {
-        // Add your action code here.
+        //Eliminar objeto cuanto tenga contacto con el personaje.
         setLocation(getX(), getY() + speed);
         if(getY() >= getWorld().getHeight() - 1){
             MyWorld juego = (MyWorld) getWorld();

@@ -1,16 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Peligro here.
+ * Objeto PELIGRO, que tiene la misma acción como
+ * el objeto peligro.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Josué Samuel Argueta Hernández   211024
+ * @version 25/07/2021
  */
 public class Peligro extends Actor
 {
     private int speed;
     
     public Peligro(int v){
+        //Obtener control de la velocidad del objeto.
         speed = v;
     }
     /**
@@ -19,17 +21,17 @@ public class Peligro extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        //Eliminar objeto cuando tenga contacto con el Personaje.
         setLocation(getX(), getY() + speed);
         if(getY() >= getWorld().getHeight() - 1){
             MyWorld juego = (MyWorld) getWorld();
             juego.removeObject(this);
-            //por cada objeto que desaparezca, aumente el pt.
-            //juego.aumentar_puntuacion(10);
             juego.disminuir_num_rivales();
             juego.aumentar_num_adelantamientos();
+            
+            //Modificar
+            //GameOver t = new GameOver();
+            //getWorld().addObject(t,((getWorld().getWidth()/2)+30),((getWorld().getHeight()/2)+150));
         }
-        //Efecto de perdida de vidas, cuando tenga contacto con la bomba.
-        
     }
 }

@@ -35,7 +35,8 @@ public class Personaje extends Actor
     }
     
     public void CheckCollision(){
-        /* */
+        /* Controlar los objetos que tienen contacto con el
+           personaje.*/
         Actor collided = getOneIntersectingObject(Bomba.class);
         Actor collided2 = getOneIntersectingObject(Peligro.class);
         if(collided != null){

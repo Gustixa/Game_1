@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class MyWorld here.
  * 
- * Autor: Samuel Argueta
+ * Autor: Josué Samuel Argueta Hernández    211024
  * @version 5 (23/07/2021)
  */
 public class MyWorld extends World
@@ -16,6 +16,8 @@ public class MyWorld extends World
     private int num_adelantamientos_nivel;
     private Personaje linux;
     private int num_rivales;
+    
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -38,6 +40,8 @@ public class MyWorld extends World
         addObject(linux, 300, 650);
         addObject(level, 100, 60);
         addObject(score, 100, 30);
+        
+        setPaintOrder(GameOver.class,Personaje.class);
         //objLife = new vida();
     }
     

@@ -53,7 +53,7 @@ public class MyWorld extends World
     public int getRandomNumber(int start, int end){
         //Obtención de valores aleatorio para mostrar los items.
         int normal = Greenfoot.getRandomNumber(end-start+1);
-        return normal + 1;
+        return normal + start;
     }
     
     public void aumentar_puntuacion(int valor){
@@ -62,14 +62,17 @@ public class MyWorld extends World
     }
     
     public void aumentar_num_adelantamientos(){
+        //
         num_adelantamientos++;
     }
     
     public void disminuir_num_rivales(){
+        //
         num_rivales++;
     }
     
     public void aumetar_dificultad(){
+        //Aumentar la velodicac de "caída" de los objetos.
         if(num_adelantamientos == num_adelantamientos_nivel){
             num_adelantamientos = 0;
             num_adelantamientos_nivel += 2;
@@ -99,7 +102,7 @@ public class MyWorld extends World
                    
             carril++;
             carril %= 5;
-        
+            /*
             if (carril == 0){
                 addObject(new Fresas(velocidad_objetos), 150, 80);
             }else if (carril == 1){
@@ -110,8 +113,8 @@ public class MyWorld extends World
                 addObject(new Peligro(velocidad_objetos), 350, 80);
             }else{
                 addObject(new Naranjas(velocidad_objetos), 410, 80);
-            num_rivales = 2;
-            }
+            num_rivales = 5;
+            }*/
         }        
     }
 }

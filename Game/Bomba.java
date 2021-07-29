@@ -11,10 +11,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Bomba extends Actor
 {
     private int speed;
+    //private int valor;
     
     public Bomba(int v){
         //tener control de la velocidad de bajada.
         speed = v;
+        //valor = value;
     }
     /**
      * Act - do whatever the Bomba wants to do. This method is called whenever

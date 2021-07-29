@@ -59,12 +59,13 @@ public class Personaje extends Actor
             juego.aumentar_puntuacion(10);
             getWorld().removeObject(collided4);
         }
+        
         Actor collided5 = getOneIntersectingObject(Hamburguesa.class);
         //por cada objeto que se recolecte, disminuye el pt.
         if(collided5 != null){
             MyWorld juego = (MyWorld) getWorld();
             juego.aumentar_puntuacion(-10);
-            getWorld().removeObject(collided4);
+            getWorld().removeObject(collided5);
         }
     }
     public void aumento_velocidad(){

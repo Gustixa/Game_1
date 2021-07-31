@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Mostrar Juego Terminado, según haya sido la acción
  * del jugador.
@@ -31,7 +30,8 @@ public class GameOver extends Actor
         Font font = image.getFont();
         imagen = new GreenfootImage(400,300);
         imagen.setColor(Color.BLACK);
-        imagen.setFont(font.deriveFont(24.0F));
+        imagen.setFont(font.deriveFont(44.0F));
+        imagen.drawString(text,0,30);
         setImage(imagen);
         Greenfoot.stop();
     }

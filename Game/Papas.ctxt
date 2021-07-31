@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Papas
+comment0.text=\r\n\ Objeto\ papas,\ que\ quita\ puntos.\r\n\ \r\n\ @author\ Jos\u00FAe\ Samuel\ Argueta\ Hern\u00E1ndez\ \ \ 211024\r\n\ @version\ 31/07/2021\r\n
+comment1.params=v
+comment1.target=Papas(int)
+comment2.params=
+comment2.target=void\ act()
+numComments=3

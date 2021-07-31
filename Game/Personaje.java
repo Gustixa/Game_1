@@ -42,6 +42,8 @@ public class Personaje extends Actor
         if(collided != null){
             getWorld().removeObject(collided);
             Greenfoot.stop();
+            GameOver t = new GameOver("Juego Terminado");
+            getWorld().addObject(t,((getWorld().getWidth()/2)+30), ((getWorld().getHeight()/2)+150));
         }else if(collided2 != null){
             getWorld().removeObject(collided2);
             Greenfoot.stop();
@@ -72,11 +74,16 @@ public class Personaje extends Actor
         }
         
         Actor collided7 = getOneIntersectingObject(Hamburguesa.class);
+        Actor collided8 = getOneIntersectingObject(Papas.class);
         //por cada objeto que se recolecte, disminuye el pt.
         if(collided7 != null){
             MyWorld juego = (MyWorld) getWorld();
             juego.aumentar_puntuacion(-10);
             getWorld().removeObject(collided7);
+        }else if(collided8 != null){
+            MyWorld juego = (MyWorld) getWorld();
+            juego.aumentar_puntuacion(-10);
+            getWorld().removeObject(collided8);
         }
     }
     public void aumento_velocidad(){

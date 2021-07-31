@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Uvas
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Uvas\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ \ Objeto\ Uvas,que\ provee\ puntos\ e\ indica\ si\ avanza\ o\ no\ de\ nivel.\r\n\ \r\n\ @author\ Jos\u00FAe\ Samuel\ Argueta\ Hern\u00E1ndez\ \ \ 211024\r\n\ @version\ 31/07/2021\r\n
 comment1.params=v
 comment1.target=Uvas(int)
 comment2.params=

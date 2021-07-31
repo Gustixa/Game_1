@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+    import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Objeto Fresas, que proporcionará puntos.
@@ -22,7 +22,6 @@ public class Fresas extends Actor
             MyWorld juego = (MyWorld) getWorld();
             juego.removeObject(this);
             juego.disminuir_num_rivales();
-            juego.aumentar_num_adelantamientos();
         }
     }
 }

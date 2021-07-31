@@ -54,10 +54,12 @@ public class Personaje extends Actor
             MyWorld juego = (MyWorld) getWorld();
             getWorld().removeObject(collided3);
             juego.aumentar_puntuacion(10);
+            juego.aumentar_num_adelantamientos();
         }else if(collided4 != null){
             MyWorld juego = (MyWorld) getWorld();
             juego.aumentar_puntuacion(10);
             getWorld().removeObject(collided4);
+            juego.aumentar_num_adelantamientos();
         }
         
         Actor collided5 = getOneIntersectingObject(Hamburguesa.class);

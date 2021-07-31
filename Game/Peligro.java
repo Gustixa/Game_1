@@ -26,8 +26,7 @@ public class Peligro extends Actor
         if(getY() >= getWorld().getHeight() - 1){
             MyWorld juego = (MyWorld) getWorld();
             juego.removeObject(this);
-            juego.disminuir_num_rivales();
-            juego.aumentar_num_adelantamientos();
+            //juego.disminuir_num_rivales();
             
             //Modificar
             //GameOver t = new GameOver();

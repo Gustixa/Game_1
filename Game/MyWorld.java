@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * Funcionalidad general del juego.
  * 
  * Autor: Josué Samuel Argueta Hernández    211024
  * @version 5 (23/07/2021)
@@ -17,6 +17,7 @@ public class MyWorld extends World
     private Personaje linux;
     private int num_rivales;
     
+    private int contar= 0;
     
     /**
      * Constructor for objects of class MyWorld.
@@ -41,13 +42,32 @@ public class MyWorld extends World
         addObject(level, 100, 60);
         addObject(score, 100, 30);
         
-        setPaintOrder(GameOver.class,Personaje.class);
-        //objLife = new vida();
+        //setPaintOrder(GameOver.class,Personaje.class);
     }
     
     public void act(){
         aumetar_dificultad();
-        aniadir_objetos();
+        contar++;
+        if(contar>59){
+            enemigos();
+            contar = 0;
+        }
+        alimentos();
+    }
+    public void enemigos(){
+        //Agregar los objetos que terminan automaticamente el juego.
+        addObject(new Bomba(velocidad_objetos), getRandomNumber(100,501), 70);    
+        //addObject(new Peligro(velocidad_objetos), getRandomNumber(100,501), 70);
+    }
+
+    public void alimentos(){
+        //Agregar los objetos que proveen puntos.
+        if(Greenfoot.getRandomNumber(60) < 1){
+            addObject(new Fresas(velocidad_objetos), getRandomNumber(100,501), 70);
+            addObject(new Naranjas(velocidad_objetos), getRandomNumber(100,501), 70);   
+            //Objeto que no da puntos, más bien, quta puntos.
+            addObject(new Hamburguesa(velocidad_objetos), getRandomNumber(100,501), 70);
+        }
     }
     
     public int getRandomNumber(int start, int end){
@@ -62,59 +82,22 @@ public class MyWorld extends World
     }
     
     public void aumentar_num_adelantamientos(){
-        //
+        //Aumentar el numero de objetos recolectados
         num_adelantamientos++;
     }
     
     public void disminuir_num_rivales(){
-        //
         num_rivales++;
     }
     
     public void aumetar_dificultad(){
-        //Aumentar la velodicac de "caída" de los objetos.
-        if(num_adelantamientos == num_adelantamientos_nivel){
+        //Aumentar la velocidad de "caída" de los objetos.        
+        if(num_adelantamientos == num_adelantamientos_nivel ){
             num_adelantamientos = 0;
             num_adelantamientos_nivel += 2;
             velocidad_objetos++;
             level.add(1);
             linux.aumento_velocidad();
         }
-    }
-    
-    public void aniadir_objetos(){
-        //Agregar objetos al mapa.
-        if(num_rivales == 0){
-            
-            int carril = getRandomNumber(0,5);
-            
-            if (carril == 0){
-                addObject(new Bomba(velocidad_objetos), 150, 80);
-            }else if (carril == 1){
-                addObject(new Hamburguesa(velocidad_objetos), 210, 80);
-            }else if(carril == 2){
-                addObject(new Naranjas(velocidad_objetos), 290, 80);
-            }else if(carril == 3){    
-                addObject(new Fresas(velocidad_objetos), 350, 80);
-            }else{
-                addObject(new Peligro(velocidad_objetos), 410, 80);
-            }
-                   
-            carril++;
-            carril %= 5;
-            /*
-            if (carril == 0){
-                addObject(new Fresas(velocidad_objetos), 150, 80);
-            }else if (carril == 1){
-                addObject(new Bomba(velocidad_objetos), 210, 80);
-            }else if(carril == 2){
-                addObject(new Hamburguesa(velocidad_objetos), 290, 80);
-            }else if(carril == 3){
-                addObject(new Peligro(velocidad_objetos), 350, 80);
-            }else{
-                addObject(new Naranjas(velocidad_objetos), 410, 80);
-            num_rivales = 5;
-            }*/
-        }        
     }
 }

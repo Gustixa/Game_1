@@ -18,6 +18,7 @@ public class Bomba extends Actor
         speed = v;
         //valor = value;
     }
+
     /**
      * Act - do whatever the Bomba wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -30,11 +31,6 @@ public class Bomba extends Actor
             MyWorld juego = (MyWorld) getWorld();
             juego.removeObject(this);
             juego.disminuir_num_rivales();
-            juego.aumentar_num_adelantamientos();
-            
-            //Modificar
-            //GameOver t = new GameOver();
-            //getWorld().addObject(t,((getWorld().getWidth()/2)+30),((getWorld().getHeight()/2)+150));
         }
     }
 }

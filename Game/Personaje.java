@@ -49,25 +49,34 @@ public class Personaje extends Actor
         
         Actor collided3 = getOneIntersectingObject(Fresas.class);
         Actor collided4 = getOneIntersectingObject(Naranjas.class);
+        Actor collided5 = getOneIntersectingObject(Uvas.class);
+        Actor collided6 = getOneIntersectingObject(Manzanas.class);
         //por cada objeto que se recolecte, aumente el pt.
         if(collided3 != null) {
             MyWorld juego = (MyWorld) getWorld();
             getWorld().removeObject(collided3);
             juego.aumentar_puntuacion(10);
-            juego.aumentar_num_adelantamientos();
         }else if(collided4 != null){
             MyWorld juego = (MyWorld) getWorld();
             juego.aumentar_puntuacion(10);
             getWorld().removeObject(collided4);
+        }else if(collided5 != null){
+            MyWorld juego = (MyWorld) getWorld();
+            juego.aumentar_puntuacion(10);
+            getWorld().removeObject(collided5);
             juego.aumentar_num_adelantamientos();
+        }else if(collided6 != null){
+            MyWorld juego = (MyWorld) getWorld();
+            juego.aumentar_puntuacion(5);
+            getWorld().removeObject(collided6);
         }
         
-        Actor collided5 = getOneIntersectingObject(Hamburguesa.class);
+        Actor collided7 = getOneIntersectingObject(Hamburguesa.class);
         //por cada objeto que se recolecte, disminuye el pt.
-        if(collided5 != null){
+        if(collided7 != null){
             MyWorld juego = (MyWorld) getWorld();
             juego.aumentar_puntuacion(-10);
-            getWorld().removeObject(collided5);
+            getWorld().removeObject(collided7);
         }
     }
     public void aumento_velocidad(){

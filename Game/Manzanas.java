@@ -1,16 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Objeto Fresas, que proporcionará puntos.
+ * Write a description of class Manzanas here.
  * 
- * @author Josué Samuel Argueta Hernández   211024
- * @version 25/05/2021
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class Fresas extends Actor
+public class Manzanas extends Actor
 {
     private int speed;
     
-    public Fresas(int v){
+    public Manzanas(int v){
         //Tener control de la velocidad
         speed = v;
     }

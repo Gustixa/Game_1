@@ -57,6 +57,8 @@ public class MyWorld extends World
     public void enemigos(){
         //Agregar los objetos que terminan automaticamente el juego.
         addObject(new Bomba(velocidad_objetos), getRandomNumber(100,501), 70);    
+        /* Agregar si se desea, pero dificulta el juego de tal manera que es
+           casi imposible poder avanzar.*/
         //addObject(new Peligro(velocidad_objetos), getRandomNumber(100,501), 70);
     }
 
@@ -64,7 +66,9 @@ public class MyWorld extends World
         //Agregar los objetos que proveen puntos.
         if(Greenfoot.getRandomNumber(60) < 1){
             addObject(new Fresas(velocidad_objetos), getRandomNumber(100,501), 70);
-            addObject(new Naranjas(velocidad_objetos), getRandomNumber(100,501), 70);   
+            addObject(new Naranjas(velocidad_objetos), getRandomNumber(100,501), 70);
+            addObject(new Uvas(velocidad_objetos), getRandomNumber(100,501),70);
+            addObject(new Manzanas(velocidad_objetos), getRandomNumber(100,501),70);
             //Objeto que no da puntos, más bien, quta puntos.
             addObject(new Hamburguesa(velocidad_objetos), getRandomNumber(100,501), 70);
         }

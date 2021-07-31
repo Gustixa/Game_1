@@ -30,7 +30,7 @@ public class Peligro extends Actor
             
             //Modificar
             //GameOver t = new GameOver();
-            //getWorld().addObject(t,((getWorld().getWidth()/2)+30),((getWorld().getHeight()/2)+150));
+            //
         }
     }
 }
